@@ -7,11 +7,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap&subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<!-- Теперь этот макет сверстан по БЭМу. Подробности: https://ru.bem.info/methodology/quick-start/ Вам сейчас это делать не нужно. Это не меняет ничего кроме названий и количества классов.-->
+<!-- Этот макет сверстан по БЭМу. Подробности: https://ru.bem.info/methodology/quick-start/ -->
 <body class="page">
 	<div class="page__header page__header_grey">
 		<header class="header">
-			<!-- Главное меню сверстано списком. Это считается лучшей практикой. -->
 			<ul class="menu header__menu">
 				<li class="menu__item">
 					<a class="menu__link" href="">Home</a>
@@ -109,6 +108,7 @@
 				<hr class="header__line team__line">
 			</div>
 			<div class="team__members">
+				<!-- В этой версии секция про команду сверстана на гридах. -->
 				<img class="team__selected-photo" src="images/man.svg" alt="Фото сотрудника">
 				<div class="team__main-content">
 					<div class="team__selected-info">
@@ -147,29 +147,26 @@
 				<h2 class="subscribe__heading">Design tips, tricks, and freebies. Delivered weekly.</h2>
 				<p class="subscribe__text">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed d</p>
 			</div>
-			<div class="subscribe__form" action="" method="GET">
-				<form action="https://google.com/search" method="GET">
-					<label for="email" class="emaild">Email Address</label>
-					<input class="subscribe__input" id="email" type="email" placeholder="Email Address...">
-				</form>
-				<a class="subscribe__button">Subscribe</a>
-			</div>
+			<form class="subscribe__form" action="" method="GET">
+				<input class="subscribe__input" type="email" name="email" placeholder="Email Address..." required>
+				<button class="subscribe__button" type="submit">Subscribe</button>
+			</form>
 		</section>
 		<div class="feedback-contacts">
 			<div class="feedback__left-box"></div>	
 			<section class="feedback">
-				<section class="feedback__header">
+				<div class="feedback__header">
 					<h2 class="feedback__heading" id="contacts">Get in touch</h2>
 					<p class="feedback__text">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et.ur adipis cing elit, sed do eiusmod tempor incididunt ut labore et. ur adipis cing elit, sed do eiusmod tempor incididunt ut labore et.</p>
 					<hr class="header__line feedback__line">
-				</section>
+				</div>
 				<section class="feedback__body">
-					<div class="feedback__form">
-						<div class="feedback__input feedback__name">Name</div>
-						<div class="feedback__input feedback__mail">Your Mail</div>
-						<div class="feedback__input feedback__message">Type your message</div>
-						<a class="feedback__button">Send message</a>
-					</div>
+					<form class="feedback__form" action="" method="GET">
+						<input class="feedback__input feedback__name" type="text" name="name" placeholder="Name" required>
+						<input class="feedback__input feedback__mail" type="email" name="email" placeholder="Your Mail" required>
+						<textarea class="feedback__input feedback__message" name="message" cols="30" rows="5" placeholder="Type your message" required></textarea>
+						<button class="feedback__button" type="submit">Send message</button>
+					</form>
 				</section>
 			</section>
 			<section class="contacts">
